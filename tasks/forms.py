@@ -6,9 +6,9 @@ class TaskForm(ModelForm):
     class Meta:
         model = Task
         fields = [
-            'name',
-            'start_date',
-            'due_date',
-            'project',
-            'assignee',
+            "name",
+            "start_date",
+            "due_date",
+            "project",
+            "assignee",
         ]

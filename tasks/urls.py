@@ -5,6 +5,6 @@ from tasks.views import (
 )
 
 urlpatterns = [
-    path('create/', create_task, name='create_task'),
-    path('mine/', show_my_tasks, name='show_my_tasks')
+    path("create/", create_task, name="create_task"),
+    path("mine/", show_my_tasks, name="show_my_tasks"),
 ]
