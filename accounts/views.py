@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from accounts.forms import LoginForm
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 
 
 def user_login(request):
@@ -25,3 +25,10 @@ def user_login(request):
         "form": form,
     }
     return render(request, "accounts/login.html", context)
+
+
+def user_logout(request):
+
+    if request.user is not None:
+        logout(request)
+        return redirect("login")
